@@ -1,0 +1,30 @@
+Package: rstanjmwiv
+Title: Bayesian Multivariate Joint Model with Association based on Within-Individual Variability
+Version: 1.0.0.0000
+Authors@R: 
+    person("Marco", "Palma", , "marco.palma@mrc-bsu.cam.ac.uk", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-0497-9001"))
+Description: Bayesian location-scale joint model for time-to-event and multivariate longitudinal data with association based on within-individual variability (Palma et al., 2025).
+License: `use_gpl3_license()`
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Biarch: true
+Depends: 
+    R (>= 3.4.0)
+Imports: 
+    methods,
+    dplyr,
+    ggplot2,
+    Rcpp (>= 0.12.0),
+    RcppParallel (>= 5.0.1),
+    rstan (>= 2.18.1),
+    rstantools (>= 2.3.1.1)
+LinkingTo: 
+    BH (>= 1.66.0),
+    Rcpp (>= 0.12.0),
+    RcppEigen (>= 0.3.3.3.0),
+    RcppParallel (>= 5.0.1),
+    rstan (>= 2.18.1),
+    StanHeaders (>= 2.18.0)
+SystemRequirements: GNU make
