@@ -6,4 +6,5 @@ To install, please use:
 ```r
 library(devtools)
 install_github("marcopalma3/rstanjmwiv")
+library(rstanjmwiv)
 ```
