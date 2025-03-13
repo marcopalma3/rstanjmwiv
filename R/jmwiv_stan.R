@@ -16,7 +16,7 @@
 #' @param ... Arguments passed to `rstan::sampling` (e.g. iter, chains).
 #'
 #' @return An object of class `stanfit` returned by `rstan::sampling`
-#'
+#' @export
 #' @examples
 #' library(rstanarm)
 #' f_logBili <- list(formula(logBili ~ sex + trt + year + (1 | id)),

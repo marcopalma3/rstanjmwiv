@@ -5,7 +5,7 @@
 #' @param prior_input A list with prior parameters.
 #'
 #' @import dplyr rstan
-#'
+#' @export
 #' @return A list with all prior parameters to be passed to `make_standata_jmwiv.R`.
 
 

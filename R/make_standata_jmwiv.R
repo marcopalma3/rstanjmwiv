@@ -17,7 +17,7 @@
 #' @import dplyr
 #'
 #' @return A list to be passed to `rstan::sampling`.
-#'
+#' @export
 #' @examples
 #' library(rstanarm)
 #' f_logBili <- list(formula(logBili ~ sex + trt + year + (1 | id)),

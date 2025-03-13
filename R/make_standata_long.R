@@ -7,7 +7,7 @@
 #' @param time_varLong Character string for name of time variable in `dataLong`.
 #'
 #' @import dplyr
-#'
+#' @export
 #' @return A list to be passed to `make_standata_jmwiv.R`.
 #'
 #' @examples

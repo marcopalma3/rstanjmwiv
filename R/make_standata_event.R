@@ -14,6 +14,7 @@
 #'
 #' @import dplyr
 #'
+#' @export
 #' @return A list to be passed to `make_standata_jmwiv.R`.
 make_standata_event <- function(formulaEvent,
                                 dataEvent,

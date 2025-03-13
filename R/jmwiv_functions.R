@@ -3,6 +3,7 @@
 #' @param fit An object of class `stanfit` returned by `rstan::sampling`
 #'
 #' @return A correlation matrix.
+#' @export
 ranef_corr_jmwiv <- function(fit){
   covmat <- matrix(0, ncol = 4, nrow = 4)
   covmat[lower.tri(covmat, diag = TRUE)] <- summary(fit, pars = "b_cov")$summary[,1]
@@ -96,7 +97,6 @@ ppcheck <- function(list_of_draws,
 #' @export
 #'
 #' @import dplyr
-#'
 simulate_jmwiv <- function(seed,
                            nsub,
                            assoc = "RE",
@@ -221,6 +221,7 @@ simulate_jmwiv <- function(seed,
 #'
 #' @import dplyr
 #'
+#' @export
 #' @return A dataframe to be used within `predict_long_qpts`.
 prepare_standata_prediction <- function(standata, param, times, ind){
   a1 <- standata[[paste0(param, "_X")]] %>%
@@ -249,7 +250,7 @@ prepare_standata_prediction <- function(standata, param, times, ind){
 #' @param assoc_code Association code (0 for 'RE', 1 for 'LP', 2 for 'CV').
 #'
 #' @import dplyr
-#'
+#' @export
 #' @return Prediction of longitudinal biomarkers at quadrature points (to be used in `pred_plot_jmwiv`).
 predict_long_qpts <- function(standata, stanfit, times = qpts, ind, id_selected, psb, assoc_code){
 
