@@ -59,7 +59,7 @@ jmwiv_stan <- function(formulaLong1,
                        basehaz = "bs",
                        basehaz_aux = list(df = 6,
                                           knots = NULL,
-                                          degree = 3),
+                                          degree = 3,tau=NULL),
                        qnodes = 15L,
                        prior_list = NULL,
                        ...){
