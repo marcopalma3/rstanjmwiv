@@ -19,5 +19,5 @@ vector[e_K] e_z_beta; // primitive coefs in event submodel (log hazard ratios)
 vector[a_K] a_z_beta; // primitive assoc params (log hazard ratios)
 //real<lower=0> y1_aux_unscaled; // unscaled residual error SDs - in MELSM we are modelling them
 //real<lower=0> y2_aux_unscaled; 
-vector[basehaz_df] e_aux_unscaled; // unscaled coefs for baseline hazard      
-
+vector[basehaz_df] e_aux_unscaled; // unscaled coefs for baseline hazard
+real<lower=0> e_tau;
