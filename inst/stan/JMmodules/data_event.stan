@@ -18,6 +18,9 @@ matrix[nrow_e_Xq,e_K] e_Xq; // centered predictor matrix (event submodel)
 vector[e_K] e_Xbar;         // predictor means (event submodel)
 int<lower=0> basehaz_df;    // df for B-splines baseline hazard
 matrix[nrow_e_Xq,basehaz_df] basehaz_X; // design matrix (basis terms) for baseline hazard
+int<lower=1> basehaz_D_rows;
+matrix[basehaz_D_rows, basehaz_df] basehaz_D;
+int<lower=0,upper=1> penalize_flag;
 vector[Npat_times_qnodes] qwts; // GK quadrature weights with (b-a)/2 scaling 
 real norm_const;            // constant shift for log baseline hazard
 real assoc_code;            // association type
