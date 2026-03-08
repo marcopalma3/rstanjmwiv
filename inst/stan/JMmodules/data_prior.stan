@@ -26,6 +26,8 @@ vector<lower=0>[a_K]    a_prior_scale;
 vector<lower=0>[M]      ymu_prior_scale_for_intercept;
 vector<lower=0>[M]      ysigma_prior_scale_for_intercept;
 vector<lower=0>[basehaz_df] e_prior_scale_for_aux;
+real<lower=0> e_tau_shape;  // a_τ
+real<lower=0> e_tau_rate;   // b_τ
 
 // lkj prior stuff
 vector<lower=0>[b_K] b_prior_scale;
