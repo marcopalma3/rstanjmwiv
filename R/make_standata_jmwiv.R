@@ -55,17 +55,17 @@ make_standata_jmwiv<- function(formulaLong1,
                                basehaz = "bs",
                                basehaz_aux = list(df = 6,
                                                   knots = NULL,
-                                                  degree = 3),
+                                                  degree = 3,tau=NULL),
                                qnodes = 15L,
                                prior_list = NULL){
-
+  
   standata_long <-  make_standata_long(formulaLong1,
                                        formulaLong2,
                                        dataLong,
                                        id_var,
                                        time_varLong)
-
-
+  
+  
   standata_event <- make_standata_event(formulaEvent,
                                         dataEvent,
                                         id_var,
@@ -75,12 +75,12 @@ make_standata_jmwiv<- function(formulaLong1,
                                         basehaz,
                                         basehaz_aux,
                                         qnodes)
-
-
+  
+  
   standata_prior <- make_standata_prior(standata_long = standata_long,
                                         standata_event = standata_event,
                                         prior_input = prior_list)
-
+  
   c(standata_long, standata_event, standata_prior)
-
+  
 }
