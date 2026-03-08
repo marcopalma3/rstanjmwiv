@@ -118,6 +118,26 @@ target += normal_lpdf(a_z_beta | 0, 1);
 // b-spline coefs for baseline hazard
 target += normal_lpdf(e_aux_unscaled | 0, 1);
 
+{
+    vector[basehaz_D_rows] diff;
+
+    if (penalize_flag == 1) {
+
+        diff = basehaz_D * e_aux;
+
+        
+        target += 0.5 * basehaz_D_rows * log(e_tau);
+
+        
+        target += -0.5 * e_tau * dot_self(diff);
+
+        
+        target += gamma_lpdf(e_tau | e_tau_shape, e_tau_rate);
+    }
+
+    // If penalize_flag == 0 → do nothing (unpenalized)
+}
+
 // group level terms
 // sds
 target += student_t_lpdf(b_sd | b_prior_df, 0, b_prior_scale); //half-student T because b_sd is defined as <lower = 0>
@@ -127,4 +147,3 @@ target += normal_lpdf(to_vector(z_b_mat) | 0, 1);
 // corr matrix
 if (b_K > 1) 
   target += lkj_corr_cholesky_lpdf(b_cholesky | b_prior_regularization);
-
