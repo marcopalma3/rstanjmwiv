@@ -1,9 +1,12 @@
 Package: rstanjmwiv
 Title: Bayesian Multivariate Joint Model with Association based on Within-Individual Variability
-Version: 1.0.0.0000
-Authors@R: 
+Version: 2.0.0
+Authors@R: c(
     person("Marco", "Palma", , "marco.palma@mrc-bsu.cam.ac.uk", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0003-0497-9001"))
+           comment = c(ORCID = "0000-0003-0497-9001")),
+    person("Omar", "El Makkaoui", , "omar.elmakkaoui@student-cs.fr", role = "aut",
+           comment = c(ORCID = "0009-0008-7324-2947"))
+  )
 Description: Bayesian location-scale joint model for time-to-event and multivariate longitudinal data with association based on within-individual variability (Palma et al., 2025).
 License: `use_gpl3_license()`
 Encoding: UTF-8
